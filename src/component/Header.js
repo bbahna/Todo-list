@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Header = styled.div`
   width: 100%;
   padding: 40px 30px 25px;
-  // border-bottom: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
   h1 {
     margin: 0;
     font-size: 35px;
