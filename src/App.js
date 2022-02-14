@@ -2,6 +2,7 @@ import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Template from './component/Template';
 import TodoHeader from './component/Header';
+import TodoList from './component/List';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -15,6 +16,7 @@ function App() {
       <GlobalStyle />
       <Template>
         <TodoHeader/>
+        <TodoList/>
       </Template>
     </>
   );
