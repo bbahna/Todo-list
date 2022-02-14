@@ -1,4 +1,4 @@
-## CRA를 활용한 TodoList study(2022.2.12~)
+## CRA를 활용한 TodoList study(220212~)
 
 1. styled-components를 통한 컴포넌트 스타일링
 2. Context API를 사용한 전역 상태관리
