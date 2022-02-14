@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Template = styled.div`
   display: flex;
-  flex: column nowrap;
+  flex-direction: column;
   position: relative;
   margin: 50px auto;
   width: 500px;
