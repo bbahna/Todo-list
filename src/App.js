@@ -1,25 +1,25 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Template from './component/Template';
-import TodoHeader from './component/Header';
-import TodoList from './component/List';
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    background: #e9ecef;
-  }
-`;
+import Header from './component/Header';
+import List from './component/List';
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <Template>
-        <TodoHeader/>
-        <TodoList/>
+        <Header/>
+        <List/>
       </Template>
     </>
   );
 }
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: #e9ecef;
+  }
+`;
 
 export default App;
