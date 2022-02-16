@@ -4,7 +4,7 @@ import Template from './component/Template';
 import Header from './component/Header';
 import List from './component/List';
 
-function App() {
+function Todo() {
   return (
     <>
       <GlobalStyle />
@@ -22,4 +22,4 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default App;
+export default Todo;
