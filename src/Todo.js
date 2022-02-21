@@ -5,7 +5,7 @@ import Header from './component/Header';
 import List from './component/List';
 import Create from './component/Create';
 
-function Todo() {
+const Todo = () => {
   return (
     <>
       <GlobalStyle />

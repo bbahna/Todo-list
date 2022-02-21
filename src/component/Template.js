@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function TodoTemplate({ children }) {
+const TodoTemplate = ({ children }) => {
   return <Template>{children}</Template>;
 }
 

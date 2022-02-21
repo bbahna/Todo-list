@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { MdAdd } from 'react-icons/md';
 
-function TodoCreate() {
+const TodoCreate = () => {
   const [open, setOpen] = useState(false);
   const onToggle = () => setOpen(!open);
 
@@ -79,7 +79,8 @@ const CircleBtn = styled.button`
     css`
       background: tomato;
       transform: translate(-50%, 50%) rotate(45deg);
-    `}
+    `
+  }
 `;
 
 export default TodoCreate;

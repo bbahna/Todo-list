@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function TodoHeader() {
+const TodoHeader = () => {
   return (
     <Header>
       <h1>2022년 2월 14일~</h1>

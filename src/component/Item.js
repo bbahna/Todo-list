@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { MdDone, MdDelete } from 'react-icons/md';
 
-function TodoItem({ id, done, text }) {
+const TodoItem = ({ id, done, text }) => {
   return (
     <Item>
       <CheckBtn done={done}>

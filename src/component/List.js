@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Item from './Item';
 
-function TodoList() {
+const TodoList = () => {
   return (
     <List>
       <Item text="styled-components를 통한 컴포넌트 스타일링" done={true} />
