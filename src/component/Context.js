@@ -46,3 +46,11 @@ export const TodoProvider = ({ children }) => {
     </TodoStateContext.Provider>
   );
 }
+
+export const useTodoState = () => {
+  return useContext(TodoStateContext);
+}
+
+export const useTodoDispatch = () => {
+  return useContext(TodoDispatchContext);
+}
