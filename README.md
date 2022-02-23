@@ -4,5 +4,5 @@
 2. Context API를 사용한 전역 상태관리
 3. 기능 구현하기(배열 상태 다루기)
 
-- 출처: https://react.vlpt.us/mashup-todolist/
+- 참조: https://react.vlpt.us/mashup-todolist/
 - Devlog ⓒ jeong_hYoon.
