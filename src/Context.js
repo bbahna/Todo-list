@@ -33,27 +33,27 @@ const TodoReducer = (state, action) => {
   }
 }
 
-const TodoStateContext = createContext();
-const TodoDispatchContext = createContext();
-const TodoNextIdContext = createContext();
+const StateContext = createContext();
+const DispatchContext = createContext();
+const NextIdContext = createContext();
 
 export const TodoProvider = ({ children }) => {
   const [state, dispatch] = useReducer(TodoReducer, TodoContext);
   const nextId = useRef(5);
 
   return (
-    <TodoStateContext.Provider value={state}>
-      <TodoDispatchContext.Provider value={dispatch}>
-        <TodoNextIdContext.Provider value={nextId}>
+    <StateContext.Provider value={state}>
+      <DispatchContext.Provider value={dispatch}>
+        <NextIdContext.Provider value={nextId}>
           {children}
-        </TodoNextIdContext.Provider>
-      </TodoDispatchContext.Provider>
-    </TodoStateContext.Provider>
+        </NextIdContext.Provider>
+      </DispatchContext.Provider>
+    </StateContext.Provider>
   );
 }
 
 export const useTodoState = () => {
-  const context = useContext(TodoStateContext);
+  const context = useContext(StateContext);
     if (!context) {
       throw new Error('Cannot find TodoProvider');
     }
@@ -61,7 +61,7 @@ export const useTodoState = () => {
 }
 
 export const useTodoDispatch = () => {
-  const context = useContext(TodoDispatchContext);
+  const context = useContext(DispatchContext);
   if (!context) {
     throw new Error('Cannot find TodoProvider');
   }
@@ -69,7 +69,7 @@ export const useTodoDispatch = () => {
 }
 
 export const useTodoNextId = () => {
-  const context = useContext(TodoNextIdContext);
+  const context = useContext(NextIdContext);
   if (!context) {
     throw new Error('Cannot find TodoProvider');
   }

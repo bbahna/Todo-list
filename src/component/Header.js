@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTodoState } from '../Context';
 
 const TodoHeader = () => {
+  const todos = useTodoState();
+  console.log(todos);
   return (
     <Header>
       <h1>2022년 2월 14일~</h1>
