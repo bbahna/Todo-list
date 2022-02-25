@@ -1,15 +1,20 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { MdDone, MdDelete } from 'react-icons/md';
+import { useTodoDispatch } from '../Context';
 
 const TodoItem = ({ id, text, done }) => {
+  const dispatch = useTodoDispatch();
+  const onToggle = () => dispatch({ type: 'TOGGLE', id });
+  const onRemove = () => dispatch({ type: 'REMOVE', id });
+
   return (
     <Item>
-      <CheckBtn done={done}>
+      <CheckBtn done={done} onClick={onToggle}>
         {done && <MdDone />}
       </CheckBtn>
       <Text done={done}>{text}</Text>
-      <RemoveIcon>
+      <RemoveIcon onClick={onRemove}>
         <MdDelete />
       </RemoveIcon>
     </Item>
