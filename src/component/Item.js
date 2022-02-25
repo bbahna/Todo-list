@@ -76,4 +76,4 @@ const Text = styled.div`
     `}
 `;
 
-export default TodoItem;
+export default React.memo(TodoItem);
