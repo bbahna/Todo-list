@@ -4,12 +4,12 @@ import { useTodoState } from '../Context';
 
 const TodoHeader = () => {
   const todos = useTodoState();
-  console.log(todos);
+  const undoneTask = todos.filter(todo => !todo.done);
   return (
     <Header>
       <h1>2022년 2월 14일~</h1>
       <div className="day">월요일</div>
-      <div className="task">할 일 n개</div>
+      <div className="task">할 일 {undoneTask.length}개</div>
     </Header>
   );
 }
