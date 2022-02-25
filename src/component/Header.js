@@ -5,10 +5,19 @@ import { useTodoState } from '../Context';
 const TodoHeader = () => {
   const todos = useTodoState();
   const undoneTask = todos.filter(todo => !todo.done);
+
+  const today = new Date();
+  const date = today.toLocaleString('ko-KR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+  const day = today.toLocaleString('ko-KR', { weekday: 'long' });
+
   return (
     <Header>
-      <h1>2022년 2월 14일~</h1>
-      <div className="day">월요일</div>
+      <h1>{date}</h1>
+      <div className="day">{day}</div>
       <div className="task">할 일 {undoneTask.length}개</div>
     </Header>
   );
